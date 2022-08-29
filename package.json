@@ -1,0 +1,24 @@
+{
+  "name": "cypress_pom_practice",
+  "version": "1.0.0",
+  "description": "Cypress automation tests with page object modal approach.",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open --e2e --browser chrome",
+    "cy:run": "npx cypress run --e2e --browser chrome --headless"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filo3of/Cypress_POM_practice.git"
+  },
+  "author": "Marko Bogicevic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filo3of/Cypress_POM_practice/issues"
+  },
+  "homepage": "https://github.com/filo3of/Cypress_POM_practice#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0",
+    "cypress": "^10.6.0"
+  }
+}
