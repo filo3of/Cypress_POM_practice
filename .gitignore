@@ -1,6 +1,5 @@
 # Dependency directory
 node_modules
-package-lock.json
 cypress/videos
 cypress/screenshots
 cypress/results

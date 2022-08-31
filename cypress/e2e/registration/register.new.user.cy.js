@@ -18,6 +18,15 @@ describe("Registration", () => {
       .verify_EnteredEmailAddress(Data.email)
       .enter_Password(Data.password)
       .verify_Address_FirstName(Data.firstName)
-      .verify_Address_LastName(Data.lastName);
+      .verify_Address_LastName(Data.lastName)
+      .enter_Address(Data.address)
+      .enter_City(Data.city)
+      .selectState(Data.state)
+      .enter_Postcode(Data.postcode)
+      .select_Country("United States")
+      .enter_MobilePhone(Data.phoneNumber)
+      .click_OnSubmit_Button();
+
+    Data.save_email(Data.email);
   });
 });

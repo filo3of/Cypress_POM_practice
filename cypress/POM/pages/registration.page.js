@@ -119,7 +119,19 @@ class Registration {
   }
 
   click_OnSubmit_Button() {
-    cy.get("#submitAccount").should("be.visible").click();
+    cy.get("#submitAccount")
+      .should("be.visible")
+      .click()
+      .then(() => {
+        cy.get("h1", { timeout: 20000 })
+          .contains("My account")
+          .should("be.visible");
+
+        cy.url().should(
+          "eq",
+          Cypress.config().baseUrl + "/index.php?controller=my-account"
+        );
+      });
 
     return this;
   }
