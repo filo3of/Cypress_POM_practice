@@ -17,7 +17,9 @@ class Authentication {
         "/index.php?controller=authentication&back=my-account#account-creation"
     );
 
-    cy.get("h1").contains("Create an account").should("be.visible");
+    cy.get("h1", { timeout: 20000 })
+      .contains("Create an account")
+      .should("be.visible");
 
     return this;
   }
@@ -42,9 +44,13 @@ class Authentication {
   click_SignIn_button() {
     cy.get("#SubmitLogin").should("be.visible").click();
 
+    cy.get("h1", { timeout: 20000 })
+      .contains("My account")
+      .should("be.visible");
+
     cy.url().should(
       "eq",
-      "http://automationpractice.com/index.php?controller=my-account"
+      Cypress.config().baseUrl + "/index.php?controller=my-account"
     );
 
     return this;

@@ -5,28 +5,57 @@ import HomePage from "../../POM/pages/home.page";
 import Data from "../../support/data";
 
 describe("Registration", () => {
-  it("Register new user", () => {
+  it("Register new female user", () => {
     HomePage.open_HomePage(Data.device);
 
     Header.click_SignIn_button();
 
-    Authentication.enter_NewEmail(Data.email).click_CreateAccount_button();
+    Authentication.enter_NewEmail(
+      Data.woman_email
+    ).click_CreateAccount_button();
 
     Registration.select_gender(Data.woman)
-      .enter_FirstName(Data.firstName)
-      .enter_LastName(Data.lastName)
-      .verify_EnteredEmailAddress(Data.email)
+      .enter_FirstName(Data.first_Female_Name)
+      .enter_LastName(Data.last_Female_Name)
+      .verify_EnteredEmailAddress(Data.woman_email)
       .enter_Password(Data.password)
-      .verify_Address_FirstName(Data.firstName)
-      .verify_Address_LastName(Data.lastName)
+      .verify_Address_FirstName(Data.first_Female_Name)
+      .verify_Address_LastName(Data.last_Female_Name)
       .enter_Address(Data.address)
       .enter_City(Data.city)
       .selectState(Data.state)
       .enter_Postcode(Data.postcode)
       .select_Country("United States")
       .enter_MobilePhone(Data.phoneNumber)
-      .click_OnSubmit_Button();
+      .click_OnSubmit_Button()
+      .verify_user_is_registered();
 
-    Data.save_email(Data.email);
+    Data.save_email(Data.woman_email);
+  });
+
+  it("Register new male user", () => {
+    HomePage.open_HomePage(Data.device);
+
+    Header.click_SignIn_button();
+
+    Authentication.enter_NewEmail(Data.man_email).click_CreateAccount_button();
+
+    Registration.select_gender(Data.man)
+      .enter_FirstName(Data.first_Male_Name)
+      .enter_LastName(Data.last_Male_Name)
+      .verify_EnteredEmailAddress(Data.man_email)
+      .enter_Password(Data.password)
+      .verify_Address_FirstName(Data.first_Male_Name)
+      .verify_Address_LastName(Data.last_Male_Name)
+      .enter_Address(Data.address)
+      .enter_City(Data.city)
+      .selectState(Data.state)
+      .enter_Postcode(Data.postcode)
+      .select_Country("United States")
+      .enter_MobilePhone(Data.phoneNumber)
+      .click_OnSubmit_Button()
+      .verify_user_is_registered();
+
+    Data.save_email(Data.man_email);
   });
 });

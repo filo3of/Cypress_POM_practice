@@ -1,0 +1,7 @@
+{
+  "first_name_is_required": "firstname is required.",
+
+  "last_name_is_required": "lastname is required.",
+
+  "postcode_error": "The Zip/Postal code you've entered is invalid. It must follow this format: 00000"
+}

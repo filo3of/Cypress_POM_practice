@@ -30,7 +30,8 @@ for (let i = 0; i <= 100; i++) {
         .enter_Postcode(Data.postcode)
         .select_Country("United States")
         .enter_MobilePhone(Data.phoneNumber)
-        .click_OnSubmit_Button();
+        .click_OnSubmit_Button()
+        .verify_user_is_registered();
 
       Data.save_email("qa_" + Data.getUnixTimeStamp() + "@something.com");
     });

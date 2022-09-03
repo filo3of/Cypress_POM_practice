@@ -13,11 +13,11 @@ Cypress automation tests with page object modal approach.
 </h3>
 
 <p align="center">
-  <a href="https://github.com/filo3of/Cypress_POM_practice/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"/>
-  </a>
   <a href="https://www.cypress.io/">
     <img src="https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg" alt="Cypress"/>
+  </a>
+  <a href="https://github.com/filo3of/Cypress_POM_practice/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"/>
   </a>
   <br />
 </p>

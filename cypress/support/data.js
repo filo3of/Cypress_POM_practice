@@ -13,26 +13,25 @@ class Data {
   // Faker initialization
   faker = faker;
 
+  // Device in which view we are running our tests
   device = "macbook-15";
 
-  // Use unix time stamp to generate unique email address
-  getUnixTimeStamp() {
-    let number = moment().unix();
-    let num = number.toString();
-    return num;
-  }
-
-  email = "qa_+" + this.getUnixTimeStamp() + "@something.qa";
-
-  password = "P@ss01133";
-
+  // Options which we are using to select desired gender during registration
   man = "1";
-
   woman = "2";
 
-  firstName = faker.name.firstName();
+  // Credentials of the user which will be used for all other tests
+  userEmail = "qa.test@something.qa";
+  userPassword = "P@ss01133";
 
-  lastName = faker.name.lastName();
+  // Registration variables
+  first_Female_Name = faker.name.firstName("female");
+
+  last_Female_Name = faker.name.lastName("female");
+
+  first_Male_Name = faker.name.firstName("male");
+
+  last_Male_Name = faker.name.lastName("male");
 
   address = faker.address.streetAddress();
 
@@ -46,18 +45,44 @@ class Data {
 
   phoneNumber = faker.phone.number("+1 202 ### ####");
 
-  userEmail = "qa.test@something.qa";
+  // Use unix time stamp to generate unique email address
+  getUnixTimeStamp() {
+    let number = moment().unix();
+    let num = number.toString();
+    return num;
+  }
 
-  userPassword = "Pas@101";
+  man_email = "qa.test_man+" + this.getUnixTimeStamp() + "@something.qa";
+  woman_email = "qa.test_woman+" + this.getUnixTimeStamp() + "@something.qa";
 
+  password = "P@ss01133";
+
+  // Save the email address in the corresponding json file
   save_email(user) {
-    cy.readFile("cypress/fixtures/users.json").then((records) => {
-      records.users.push({
-        email: user,
-      });
+    switch (user) {
+      case this.woman_email:
+        cy.readFile("cypress/fixtures/users_woman.json").then((records) => {
+          records.users.push({
+            email: user,
+          });
+          cy.writeFile("cypress/fixtures/users_woman.json", records);
+        });
 
-      cy.writeFile("cypress/fixtures/users.json", records);
-    });
+        break;
+
+      case this.man_email:
+        cy.readFile("cypress/fixtures/users_man.json").then((records) => {
+          records.users.push({
+            email: user,
+          });
+          cy.writeFile("cypress/fixtures/users_man.json", records);
+        });
+
+        break;
+
+      default:
+        break;
+    }
   }
 }
 
