@@ -9,7 +9,7 @@
 </p>
 
 <h3 align="center">
-Cypress automation tests with page object modal approach.
+Cypress automation tests with page object modal approach
 </h3>
 
 <p align="center">

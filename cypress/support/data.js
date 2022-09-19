@@ -20,6 +20,9 @@ class Data {
   man = "1";
   woman = "2";
 
+  gender_man = "man";
+  gender_woman = "woman";
+
   // Credentials of the user which will be used for all other tests
   userEmail = "qa.test@something.qa";
   userPassword = "P@ss01133";
@@ -83,6 +86,16 @@ class Data {
       default:
         break;
     }
+  }
+
+  // Get latest email address that was registered for specific user group
+  lastEmail(gender) {
+    const records = require("../fixtures/users_" + gender + ".json");
+
+    let candidate = records.users.length - 1;
+    let lastEmail = records.users[candidate].email;
+
+    return lastEmail;
   }
 }
 

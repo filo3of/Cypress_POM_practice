@@ -1,6 +1,7 @@
 class HomePage {
   open_HomePage(device) {
     cy.viewport(device);
+
     cy.visit("/index.php");
 
     cy.url().should("eq", Cypress.config().baseUrl + "/index.php");
