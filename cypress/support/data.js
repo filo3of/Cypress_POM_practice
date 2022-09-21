@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+///<reference types="cypress-iframe" />
 
 import { faker } from "@faker-js/faker";
 import moment from "moment";

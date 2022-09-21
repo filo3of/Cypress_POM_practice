@@ -11,10 +11,12 @@ class ProductPage {
     return this;
   }
 
-  click_On_PlusOne_quantity() {
-    cy.get("span").find(".icon-plus").should("be.visible").click();
+  click_On_PlusOne_quantity(steps) {
+    for (let n = 1; n < steps; n++) {
+      cy.get("span").find(".icon-plus").should("be.visible").click();
+    }
 
-    cy.get("#quantity_wanted").should("have.value", 2);
+    cy.get("#quantity_wanted").should("have.value", steps);
 
     return this;
   }
