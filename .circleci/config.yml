@@ -4,6 +4,12 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run:
-          command: npx cypress run
-            store_artifacts: true
+      steps:
+        - checkout
+        - run:
+            name: Running E2E tests
+            command: npx cypress run
+        - store_artifacts:
+            path: cypress/videos
+        - store_artifacts:
+            path: cypress/screenshots
