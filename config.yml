@@ -6,3 +6,4 @@ workflows:
     jobs:
       - cypress/run:
           command: npx cypress run
+            store_artifacts: true
