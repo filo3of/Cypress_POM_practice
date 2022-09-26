@@ -24,10 +24,6 @@ class Data {
   gender_man = "man";
   gender_woman = "woman";
 
-  // Credentials of the user which will be used for all other tests
-  userEmail = "qa.test@something.qa";
-  userPassword = "P@ss01133";
-
   // Registration variables
   first_Female_Name = faker.name.firstName("female");
 
