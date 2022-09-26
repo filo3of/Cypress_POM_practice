@@ -12,8 +12,6 @@
 Cypress automation tests with page object modal approach
 </h3>
 
-<p align="center">[![CircleCI](https://circleci.com/gh/filo3of/Cypress_POM_practice.svg?style=svg)](https://circleci.com/gh/filo3of/Cypress_POM_practice)</p>
-
 <p align="center">
   <a href="https://www.cypress.io/">
     <img src="https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg" alt="Cypress"/>
@@ -79,6 +77,8 @@ npm run cy:run
 ```
 
 - More info about scripts you can find in "package.json" file.
+
+## CircleCI latest status [![CircleCI](https://circleci.com/gh/filo3of/Cypress_POM_practice.svg?style=svg)](https://circleci.com/gh/filo3of/Cypress_POM_practice)
 
 ## License
 
