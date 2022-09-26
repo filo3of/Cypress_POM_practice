@@ -12,7 +12,7 @@
 Cypress automation tests with page object modal approach
 </h3>
 
-[![CircleCI](https://circleci.com/gh/filo3of/cypress_pom.svg?style=svg)]
+[![CircleCI](https://circleci.com/gh/filo3of/Cypress_POM_practice.svg?style=svg)](https://circleci.com/gh/filo3of/Cypress_POM_practice)
 
 <p align="center">
   <a href="https://www.cypress.io/">
