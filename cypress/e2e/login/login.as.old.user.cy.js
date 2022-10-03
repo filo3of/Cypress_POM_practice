@@ -6,7 +6,7 @@ import AutomationUsers from "../../fixtures/automation_users.json";
 
 describe("Should log in as already registered user", () => {
   it("Log in as old user", () => {
-    HomePage.open_HomePage(Data.device);
+    HomePage.open_HomePage();
 
     Header.click_SignIn_button();
 
@@ -16,7 +16,7 @@ describe("Should log in as already registered user", () => {
   });
 
   it("Log in as newly registered man user", () => {
-    HomePage.open_HomePage(Data.device);
+    HomePage.open_HomePage();
 
     Header.click_SignIn_button();
 
@@ -26,7 +26,7 @@ describe("Should log in as already registered user", () => {
   });
 
   it("Log in as newly registered woman user", () => {
-    HomePage.open_HomePage(Data.device);
+    HomePage.open_HomePage();
 
     Header.click_SignIn_button();
 

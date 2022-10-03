@@ -1,6 +1,8 @@
+import Data from "../../support/data";
+
 class HomePage {
-  open_HomePage(device) {
-    cy.viewport(device);
+  open_HomePage() {
+    cy.viewport(Data.device);
 
     cy.visit("/index.php");
 

@@ -6,7 +6,7 @@
 
 // describe("Registration", () => {
 //   it("Register new female user", () => {
-//     HomePage.open_HomePage(Data.device);
+//     HomePage.open_HomePage();
 
 //     Header.click_SignIn_button();
 
@@ -34,7 +34,7 @@
 //   });
 
 //   it("Register new male user", () => {
-//     HomePage.open_HomePage(Data.device);
+//     HomePage.open_HomePage();
 
 //     Header.click_SignIn_button();
 

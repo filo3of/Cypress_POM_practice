@@ -3,8 +3,8 @@
     "name": "QA_John",
     "email": "qa.test@something.qa",
     "password": "P@ss01133",
-    "productPrice": "16.51"
+    "productPrice": "27.00",
+    "fixed_Blouse_Price": "27.00"
   },
-
   "password": "P@ss01133"
 }

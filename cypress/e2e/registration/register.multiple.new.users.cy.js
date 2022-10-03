@@ -7,7 +7,7 @@
 // for (let i = 0; i <= 100; i++) {
 //   describe("Registration 100 new users", () => {
 //     it("Register new user", () => {
-//       HomePage.open_HomePage(Data.device);
+//       HomePage.open_HomePage();
 
 //       Header.click_SignIn_button();
 

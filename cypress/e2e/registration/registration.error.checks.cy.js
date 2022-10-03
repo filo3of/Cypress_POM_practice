@@ -7,7 +7,7 @@ import Error from "../../fixtures/error_messages.json";
 
 describe("Should check error messages on the registration process for the female user", () => {
   it("Verify error when first name is missing", () => {
-    HomePage.open_HomePage(Data.device);
+    HomePage.open_HomePage();
 
     Header.click_SignIn_button();
 
@@ -31,7 +31,7 @@ describe("Should check error messages on the registration process for the female
   });
 
   it("Verify error when last name is missing", () => {
-    HomePage.open_HomePage(Data.device);
+    HomePage.open_HomePage();
 
     Header.click_SignIn_button();
 
@@ -55,7 +55,7 @@ describe("Should check error messages on the registration process for the female
   });
 
   it("Verify zip code error", () => {
-    HomePage.open_HomePage(Data.device);
+    HomePage.open_HomePage();
 
     Header.click_SignIn_button();
 
