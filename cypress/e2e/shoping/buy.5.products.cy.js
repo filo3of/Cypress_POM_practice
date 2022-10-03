@@ -9,7 +9,7 @@ describe("Buy different products using different options", () => {
 
     HomePageMiddleSection.hover_and_click_on_Product(
       Products.Blouse.name
-    ).verify_modalView(Products.Faded_Short_Sleeve_T_shirts.name);
+    ).verify_modalView(Products.Blouse.name);
 
     ProductPageModalView.select_size(
       Products.Blouse.size_M

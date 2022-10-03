@@ -81,6 +81,7 @@ npm run cy:run
 ## CircleCI
 
 Latest run status:
+
 [![CircleCI](https://circleci.com/gh/filo3of/Cypress_POM_practice.svg?style=svg)](https://circleci.com/gh/filo3of/Cypress_POM_practice)
 
 ## License
