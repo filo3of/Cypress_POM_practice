@@ -5,7 +5,7 @@
 // import Data from "../../support/data";
 
 // describe("Registration", () => {
-//   it("Register new female user", () => {
+//   it.only("Register new female user", () => {
 //     HomePage.open_HomePage();
 
 //     Header.click_SignIn_button();
