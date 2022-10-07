@@ -4,10 +4,6 @@
 const registerCypressGrep = require("cypress-grep");
 registerCypressGrep();
 
-// if you want to use the "import" keyword
-import registerCypressGrep from "cypress-grep";
-registerCypressGrep();
-
 // Import commands.js using ES2015 syntax:
 import "./commands";
 import "cypress-iframe";
