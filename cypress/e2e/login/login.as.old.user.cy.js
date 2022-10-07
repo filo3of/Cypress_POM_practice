@@ -4,7 +4,7 @@ import HomePage from "../../POM/pages/home.page";
 import Data from "../../support/data";
 import AutomationUsers from "../../fixtures/automation_users.json";
 
-describe("Should log in as already registered user", () => {
+describe("Should log in as already registered user", { tags: "@smoke" }, () => {
   it("Log in as old user", () => {
     HomePage.open_HomePage();
 

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "npx cypress open --e2e --browser chrome",
-    "cy:run": "npx cypress run --e2e --browser chrome --headless"
+    "cy:run": "npx cypress run --e2e --browser chrome --headless",
+    "cy:smoke": "npx cypress open --e2e --browser chrome --env grepTags=@smoke",
+    "cy:shopping": "npx cypress open --e2e --browser chrome --env grepTags=@shopping"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.4.0",
     "cypress": "^10.6.0",
+    "cypress-grep": "^3.0.3",
     "cypress-iframe": "^1.0.1",
     "cypress-real-events": "^1.7.1",
     "cypress-xpath": "^2.0.1",

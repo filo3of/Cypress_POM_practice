@@ -10,10 +10,18 @@ module.exports = defineConfig({
     runMode: 2,
     openMode: 0,
   },
+
+  env: {
+    grepFilterSpecs: true,
+    grepOmitFiltered: true,
+  },
+
   e2e: {
     baseUrl: "http://automationpractice.com",
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require("cypress-grep/src/plugin")(config);
+
+      return config;
     },
   },
 });

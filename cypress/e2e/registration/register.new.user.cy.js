@@ -4,8 +4,8 @@
 // import HomePage from "../../POM/pages/home.page";
 // import Data from "../../support/data";
 
-// describe("Registration", () => {
-//   it.only("Register new female user", () => {
+// describe("Registration", { tags: "@smoke" }, () => {
+//   it("Register new female user", () => {
 //     HomePage.open_HomePage();
 
 //     Header.click_SignIn_button();
